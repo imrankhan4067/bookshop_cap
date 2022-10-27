@@ -1,0 +1,5 @@
+POST http://localhost:4004/browse/Student       
+Content-Type: application/json
+
+{"STDID":116,"name":"Axa","gender":"Female","title":null}
+

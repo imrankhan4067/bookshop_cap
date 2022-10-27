@@ -1,0 +1,24 @@
+{
+    "xsappname": "bookshop",
+    "tenant-mode": "dedicated",
+    "description": "Security",
+    "authorities": ["$ACCEPT_GRANTED_AUTHORITIES"],
+    "scopes": [
+      {
+        "name": "$XSAPPNAME.BookshopUser",
+        "description": "Bookshop user",
+        "granted-apps": [
+          "$XSAPPNAME(application,zcallcapser)"
+          
+        ]
+       
+      }
+    ],
+    "role-templates": [
+      {
+        "name": "BOOKSHOP_DB_SRV",
+        "description": "Access to bookshop",
+        "scope-references": ["$XSAPPNAME.BookshopUser"]
+      }
+    ]
+  }
